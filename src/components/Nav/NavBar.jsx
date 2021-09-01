@@ -3,13 +3,11 @@ import React, {Fragment} from 'react';
 import '././../../App.css'
 import Navbar from 'react-bootstrap/NavBar'
 import Nav from 'react-bootstrap/Nav'
-import NavDropdown from 'react-bootstrap/NavDropdown'
 import Container from 'react-bootstrap/Container'
 import Form from 'react-bootstrap/Form'
 import FormControl from 'react-bootstrap/FormControl'
 import Button from 'react-bootstrap/Button'
-
-import { BsBag } from "react-icons/bs";
+import CartWidget from './CartWidget';
 
 const NavBar = () => {
     return (
@@ -34,7 +32,7 @@ const NavBar = () => {
       <Button variant="outline-warning" className="nav-spacing">Search</Button>
     </Form>
     <Nav.Link className="nav-spacing">
-      <BsBag className="nav-warning--color"/>
+     <CartWidget />
     </Nav.Link>
     </Nav>
   </Navbar.Collapse>
