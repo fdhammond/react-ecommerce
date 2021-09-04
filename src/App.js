@@ -9,8 +9,6 @@ function App() {
       <NavBar />
       <ItemListContainer
         greeting="Hello from ItemListContainer"
-        stock={5}
-        initial={1}
       />
     </div>
   );

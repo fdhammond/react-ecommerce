@@ -1,35 +1,9 @@
-import { useState } from 'react'
-import Button from 'react-bootstrap/Button'
 import Card from 'react-bootstrap/Card'
 import Container from 'react-bootstrap/Container'
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
 import thisisfine from './../images/thisisfine.png'
+import ItemCount from './ItemCount'
 
-const Cards = ({ stock, initial }) => {
-  const image = "https://static.wikia.nocookie.net/memes-pedia/images/7/74/This_Is_Fine.png/revision/latest/top-crop/width/360/height/450?cb=20170101154622&path-prefix=es"
-
-  const [counter, setCounter] = useState(initial);
-
-  const addCounter = () => {
-    if (stock > counter) {
-      setCounter(counter + 1)
-      return counter;
-    } else {
-      return null;
-    }
-  }
-
-  const reduceCounter = () => {
-    if (counter <= stock && counter >= initial ) {
-      console.log(counter)
-      setCounter(counter - 1)
-      return counter;
-    } else {
-      return null;
-    }
-  }
-
+const Cards = () => {
 
   return (
     <>
@@ -43,18 +17,10 @@ const Cards = ({ stock, initial }) => {
       the card's content.
     </Card.Text>
     <Container>
-      <Row>
-      <Col> <Button variant="primary" onClick={() => reduceCounter()}>-</Button> </Col>
-
-      <Col xs={5}> <Container>{counter}</Container> </Col>
-
-      <Col><Button variant="primary" onClick={() => addCounter()}>+</Button></Col>
-      </Row>
-    </Container>
-    <Container className="mt-2">
-    <Row>
-      <Button variant="primary" size="sm" onClick={() => alert('Click Buy!') }>Buy</Button>
-    </Row>
+      <ItemCount
+        stock={5}
+        initial={1}
+      />
     </Container>
   </Card.Body>
         </Card>
