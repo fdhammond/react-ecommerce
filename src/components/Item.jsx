@@ -16,7 +16,7 @@ const Item = ({id, name, image, price, description, stock}) => {
 <Col md="auto">
     <CardGroup style={{ width: '18rem' }}>
     <Card key={id}>
-          <CardImg variant="top" src={thisisfine} />
+          <CardImg variant="top" src={image} />
         <Card.Body>
           <Card.Title>{name}</Card.Title>
             <Card.Text>
@@ -24,7 +24,7 @@ const Item = ({id, name, image, price, description, stock}) => {
             </Card.Text>
               <Container>
                 <ItemCount
-                  stock={5}
+                  stock={stock}
                   initial={1}
                 />
               </Container>
