@@ -4,8 +4,8 @@ import CardGroup from 'react-bootstrap/CardGroup'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import CardImg from 'react-bootstrap/CardImg'
-import thisisfine from './../images/thisisfine.png'
 import ItemCount from './ItemCount'
+import '../App.css'
 
 const Item = ({id, name, image, price, description, stock}) => {
 
@@ -13,23 +13,22 @@ const Item = ({id, name, image, price, description, stock}) => {
     <>
 <Container>
 <Row>
-<Col md="auto">
-    <CardGroup style={{ width: '18rem' }}>
-    <Card key={id}>
-          <CardImg variant="top" src={image} />
-        <Card.Body>
+<Col>
+    <CardGroup style={{ width: '14rem', height: '100%'}} className="d-flex">
+    <Card key={id} className="m-0 p-0">
+        <CardImg variant="top" src={image} />
+        <Card.Body className="sampleStyle">
           <Card.Title>{name}</Card.Title>
             <Card.Text>
               {description}
             </Card.Text>
-              <Container>
+            <Card.Body>
                 <ItemCount
                   stock={stock}
                   initial={1}
                 />
-              </Container>
-                <Container>
-            </Container>
+            </Card.Body>
+
         </Card.Body>
     </Card>
     </CardGroup>

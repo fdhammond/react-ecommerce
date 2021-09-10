@@ -31,23 +31,16 @@ const ItemCount = ({stock, initial}) => {
     }
 
     return (
-        <>
-      <Row>
-        <Col>
+      <>
+        <Container className="d-flex m-0 p-0 justify-content-between">
             <Button variant="primary" onClick={() => reduceCounter()}>-</Button>
-        </Col>
-        <Col xs={5}>
-            <Container>{counter}</Container>
-        </Col>
-        <Col>
+            <Container className="d-flex m-0 p-0 justify-content-center">{counter}</Container>
             <Button variant="primary" onClick={() => addCounter()}>+</Button>
-        </Col>
-      </Row>
-    <Container className="mt-2">
-        <Row>
+        </Container>
+        <Container className="d-flex mt-3 p-0 justify-content-center">
             <Button variant="primary" size="sm" onClick={() => alert('Click Buy!') }>Buy</Button>
-        </Row>
-    </Container>
+        </Container>
+
         </>
     );
 };

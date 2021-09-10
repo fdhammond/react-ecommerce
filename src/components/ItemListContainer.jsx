@@ -8,13 +8,13 @@ import Col from 'react-bootstrap/Col'
 const ItemListContainer = ({ greeting, stock, initial }) => {
 
     return (
-        <Container>
+        <Container className="m-0">
             <Container className="mt-3">
                 <h1>{ greeting }</h1>
             </Container>
             <Container>
-            <Row className="mt-4">
-                <Col sm><ItemList /></Col>
+            <Row>
+                <Col className="mt-3"><ItemList /></Col>
             </Row>
             </Container>
 

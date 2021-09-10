@@ -6,13 +6,13 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="App">
+    <>
       <NavBar />
       <ItemListContainer
         greeting="Hello from ItemListContainer"
       />
       <Footer/>
-    </div>
+    </>
   );
 }
 
