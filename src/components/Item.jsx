@@ -11,11 +11,8 @@ const Item = ({name, image, price, description, stock}) => {
 
   return (
     <>
-<Container>
-<Row>
-<Col>
-    <CardGroup style={{ width: '14rem', height: '100%'}} className="d-flex">
-    <Card className="m-0 p-0">
+
+    <Card className="m-3 p-0" style={{ width: '14rem', height: '100%'}}>
         <CardImg variant="top" src={image} />
         <Card.Body className="sampleStyle">
           <Card.Title>{name}</Card.Title>
@@ -33,10 +30,6 @@ const Item = ({name, image, price, description, stock}) => {
             </Card.Body>
         </Card.Body>
     </Card>
-    </CardGroup>
-</Col>
-</Row>
-</Container>
     </>
     );
 };
