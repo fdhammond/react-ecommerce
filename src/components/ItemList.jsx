@@ -1,8 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import Item from '../components/Item'
 import Container from 'react-bootstrap/Container'
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
 
 let data = [
     {id: 1, name: 'guitar-1', image: 'https://images.unsplash.com/photo-1556449895-a33c9dba33dd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80', price: '1500', description: 'Breve DESCRIPCION del producto', stock: 5 },
@@ -10,13 +8,7 @@ let data = [
     {id: 3, name: 'guitar-3', image: 'https://images.unsplash.com/photo-1556449895-a33c9dba33dd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80', price: '1200', description: 'Breve RESUMEN del producto', stock: 5},
     {id: 4, name: 'guitar-4', image: 'https://images.unsplash.com/photo-1556449895-a33c9dba33dd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80', price: '1000', description: 'Breve descripcion del producto', stock: 5},
     {id: 5, name: 'guitar-5', image: 'https://images.unsplash.com/photo-1556449895-a33c9dba33dd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80', price: '5000', description: 'Breve descripcion del producto', stock: 5 },
-    { id: 6, name: 'guitar-5', image: 'https://images.unsplash.com/photo-1556449895-a33c9dba33dd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80', price: '3000', description: 'Breve descripcion del producto', stock: 5 },
-    { id: 7, name: 'guitar-5', image: 'https://images.unsplash.com/photo-1556449895-a33c9dba33dd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80', price: '3000', description: 'Breve descripcion del producto', stock: 5 },
-    { id: 8, name: 'guitar-5', image: 'https://images.unsplash.com/photo-1556449895-a33c9dba33dd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80', price: '3000', description: 'Breve descripcion del producto', stock: 5 },
-    { id: 9, name: 'guitar-5', image: 'https://images.unsplash.com/photo-1556449895-a33c9dba33dd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80', price: '3000', description: 'Breve descripcion del producto', stock: 5 },
-    { id: 10, name: 'guitar-5', image: 'https://images.unsplash.com/photo-1556449895-a33c9dba33dd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80', price: '3000', description: 'Breve descripcion del producto', stock: 5 },
-    { id: 11, name: 'guitar-5', image: 'https://images.unsplash.com/photo-1556449895-a33c9dba33dd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80', price: '3000', description: 'Breve descripcion del producto', stock: 5 },
-    {id: 12, name: 'guitar-5', image: 'https://images.unsplash.com/photo-1556449895-a33c9dba33dd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80', price: '3000', description: 'Breve descripcion del producto', stock: 5},
+    {id: 6, name: 'guitar-5', image: 'https://images.unsplash.com/photo-1556449895-a33c9dba33dd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80', price: '3000', description: 'Breve descripcion del producto', stock: 5 },
 ]
 
 const getData = () => new Promise((resolve, reject) => {
