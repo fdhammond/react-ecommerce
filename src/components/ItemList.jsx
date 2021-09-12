@@ -3,12 +3,12 @@ import Item from '../components/Item'
 import Container from 'react-bootstrap/Container'
 
 let data = [
-    {id: 1, name: 'guitar-1', image: 'https://images.unsplash.com/photo-1556449895-a33c9dba33dd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80', price: '1500', description: 'Breve DESCRIPCION del producto', stock: 5 },
-    {id: 2, name: 'guitar-2', image: 'https://images.unsplash.com/photo-1556449895-a33c9dba33dd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80', price: '500', description: 'Breve descripcion del producto', stock: 5},
-    {id: 3, name: 'guitar-3', image: 'https://images.unsplash.com/photo-1556449895-a33c9dba33dd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80', price: '1200', description: 'Breve RESUMEN del producto', stock: 5},
-    {id: 4, name: 'guitar-4', image: 'https://images.unsplash.com/photo-1556449895-a33c9dba33dd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80', price: '1000', description: 'Breve descripcion del producto', stock: 5},
-    {id: 5, name: 'guitar-5', image: 'https://images.unsplash.com/photo-1556449895-a33c9dba33dd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80', price: '5000', description: 'Breve descripcion del producto', stock: 5 },
-    {id: 6, name: 'guitar-5', image: 'https://images.unsplash.com/photo-1556449895-a33c9dba33dd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80', price: '3000', description: 'Breve descripcion del producto', stock: 5 },
+    {id: 1, name: 'guitar-1', image: 'https://res.cloudinary.com/dzkqopnby/image/upload/v1631247467/react-ecommerce/pngfind.com-electric-guitar-png-18298_ikw7he.png', price: '1500', description: 'Breve DESCRIPCION del producto', stock: 5 },
+    {id: 2, name: 'guitar-2', image: 'https://res.cloudinary.com/dzkqopnby/image/upload/v1631247451/react-ecommerce/pngfind.com-electric-guitar-png-19026_xmr065.png', price: '500', description: 'Breve descripcion del producto', stock: 5},
+    {id: 3, name: 'guitar-3', image: 'https://res.cloudinary.com/dzkqopnby/image/upload/v1631247449/react-ecommerce/pngfind.com-guitar-png-1034724_ggylpi.png', price: '1200', description: 'Breve RESUMEN del producto', stock: 5},
+    {id: 4, name: 'guitar-4', image: 'https://res.cloudinary.com/dzkqopnby/image/upload/v1631247446/react-ecommerce/pngfind.com-guitar-png-597285_df9dfp.png', price: '1000', description: 'Breve descripcion del producto', stock: 5},
+    {id: 5, name: 'guitar-5', image: 'https://res.cloudinary.com/dzkqopnby/image/upload/v1631247444/react-ecommerce/pngfind.com-electric-guitar-png-18428_roynvz.png', price: '5000', description: 'Breve descripcion del producto', stock: 5 },
+    {id: 6, name: 'guitar-6', image: 'https://res.cloudinary.com/dzkqopnby/image/upload/v1631475156/react-ecommerce/152621-guitar-photos-black-rock-free-download-png-hq_drkiio.png', price: '3000', description: 'Breve descripcion del producto', stock: 5 },
 ]
 
 const getData = () => new Promise((resolve, reject) => {

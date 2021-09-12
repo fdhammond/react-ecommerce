@@ -33,12 +33,14 @@ const ItemCount = ({stock, initial}) => {
     return (
       <>
         <Container className="d-flex m-0 p-0 justify-content-between">
-            <Button variant="primary" onClick={() => reduceCounter()}>-</Button>
+          <Button onClick={() => reduceCounter()} className="rounded-circle nav-warning--color" variant="warning" style={{color: "white"}}>
+          -
+          </Button>
             <Container className="d-flex m-0 p-0 justify-content-center">{counter}</Container>
-            <Button variant="primary" onClick={() => addCounter()}>+</Button>
+            <Button onClick={() => addCounter()} className="rounded-circle nav-warning--color" variant="warning" style={{color: "white"}}>+</Button>
         </Container>
         <Container className="d-flex mt-3 p-0 justify-content-center">
-            <Button variant="primary" size="sm" onClick={() => alert('Click Buy!') }>Buy</Button>
+            <Button size="sm" onClick={() => alert('Click Buy!')} className="dark--color">Buy</Button>
         </Container>
 
         </>

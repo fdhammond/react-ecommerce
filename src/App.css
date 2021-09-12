@@ -11,7 +11,32 @@
   color: #ffc107;
 }
 
+.button-color-main {
+  color: #ffc107;
+}
+
+.button-color-main:hover {
+  color: black;
+}
+
 .sampleStyle {
   min-width: 20%;
   flex-grow: 0;
+}
+
+.cardImage {
+  object-fit: 'cover';
+  border-radius: 50%;
+  width: 50vw;
+  height: 30vh;
+}
+
+.dark--color {
+  background-color: black;
+  border-color: white;
+}
+
+.dark--color:hover {
+  background-color: #ffc107;
+  border-color: white;
 }
