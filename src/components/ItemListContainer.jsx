@@ -5,7 +5,7 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 
-const ItemListContainer = ({ greeting, stock, initial }) => {
+const ItemListContainer = ({greeting}) => {
 
     return (
         <Container>
@@ -19,9 +19,7 @@ const ItemListContainer = ({ greeting, stock, initial }) => {
                 <Col className="mt-3"><ItemList /></Col>
             </Row>
             </Container>
-
-
-    </Container>
+        </Container>
     );
 };
 

@@ -7,7 +7,6 @@ const Item = ({name, image, price, description, stock}) => {
 
   return (
     <>
-
     <Card className="m-3 p-0" style={{ width: '15rem', height: 'auto', borderRadius: '14px', backgroundColor: "#f8f9fa", borderColor: "white"}}>
         <Card.Body className="d-flex justify-content-center">
         <CardImg
@@ -19,9 +18,9 @@ const Item = ({name, image, price, description, stock}) => {
 
         <Card.Body className="sampleStyle" style={{ width: '100%', height: 'auto'}}>
           <Card.Title className="d-flex justify-content-center">{name}</Card.Title>
-            <Card.Text>
+            {/* <Card.Text>
               {description}
-            </Card.Text>
+            </Card.Text> */}
             <Card.Body className="d-flex justify-content-center">
             <h6>${price}</h6>
             </Card.Body>

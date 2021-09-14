@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, {useState, useEffect} from 'react';
 import ItemDetail from "./ItemDetail";
 import Container from 'react-bootstrap/Container'
@@ -60,6 +61,24 @@ const ItemDetailContainer = () => {
 
 
     </Container>
+=======
+import React from 'react';
+
+const ItemDetailContainer = () => {
+    return (
+        <Container>
+            <Container>
+                <Row className="mt-3">
+                <h1>{ greeting }</h1>
+                </Row>
+            </Container>
+            <Container>
+            <Row>
+                <Col className="mt-3"><ItemDetail /></Col>
+            </Row>
+            </Container>
+        </Container>
+>>>>>>> bed4f8934506d14d7da0349806c70d7993541224
     );
 };
 
