@@ -12,14 +12,9 @@ let data = [
 ]
 
 const getData = () => new Promise((resolve, reject) => {
-    let response = '200'
-    response
-    ?
     setTimeout(() => {
         resolve(data)
     }, 2000)
-    :
-    reject('error 404')
 })
 
 const ItemList = () => {
@@ -45,7 +40,7 @@ const ItemList = () => {
     return (
         <>
         <Container className="d-flex m-0 p-0 justify-content-center" style={{ width: '100%', flexWrap: 'wrap'}}>
-    {       items.map(productos =>
+        {data.map(productos =>
             <Item
             key={productos.id}
             name={productos.name}
@@ -55,7 +50,7 @@ const ItemList = () => {
             stock={productos.stock}
             />
     )}
-        </Container>
+            </Container>
         </>
     );
 };
