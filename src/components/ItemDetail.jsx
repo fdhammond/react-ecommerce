@@ -1,13 +1,4 @@
-<<<<<<< HEAD
-import React from 'react';
-
-const ItemDetail = ({description}) => {
-    return (
-        <>
-            <h2>{description}</h2>
-=======
-import React, {useState, useEffect} from 'react';
-import Item from '../components/Item'
+import React, {useState, useEffect} from 'react'
 import Container from 'react-bootstrap/Container'
 
 let data = [
@@ -48,7 +39,7 @@ const ItemDetail = () => {
     return (
         <>
         <Container className="d-flex m-0 p-0 justify-content-center" style={{ width: '100%', flexWrap: 'wrap'}}>
-        {data.map(productos =>
+        {items.map(productos =>
             <ItemDetail
             key={productos.id}
             name={productos.name}
@@ -59,7 +50,7 @@ const ItemDetail = () => {
             />
     )}
             </Container>
->>>>>>> bed4f8934506d14d7da0349806c70d7993541224
+
         </>
     );
 };
