@@ -13,9 +13,7 @@ function App() {
           <NavBar />
         <Switch>
             <Route exact path='/'>
-          <ItemListContainer
-          greeting="Hello from ItemListContainer"
-          />
+          <ItemListContainer />
             </Route>
             <Route exact path='/cart' component={Cart} />
       <Footer/>

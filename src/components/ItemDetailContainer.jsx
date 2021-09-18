@@ -10,7 +10,7 @@ const ItemDetailContainer = () => {
             </Container>
             <Container>
             <Row>
-                <Col className="mt-3"><ItemDetail /></Col>
+                <Col className="mt-3"><Item /></Col>
             </Row>
             </Container>
         </Container>
