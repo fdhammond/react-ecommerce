@@ -100,7 +100,7 @@ let products = [
     image:
       "https://res.cloudinary.com/dzkqopnby/image/upload/v1631759012/react-ecommerce/acustic2_zeie1f.png",
     price: "2300",
-    description: "Breve descripcion del producto",
+    description: "Breve descripcion del productoo",
     stock: 5,
   },
 ];
