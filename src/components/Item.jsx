@@ -1,9 +1,11 @@
 import Card from "react-bootstrap/Card";
+import Button from "react-bootstrap/Button";
 import CardImg from "react-bootstrap/CardImg";
 import ItemCount from "./ItemCount";
 import "../App.css";
+import { Link, NavLink } from "react-router-dom";
 
-const Item = ({ name, image, price, description, stock }) => {
+const Item = ({ id, category, name, image, price, description, stock }) => {
   return (
     <>
       <Card
@@ -36,8 +38,18 @@ const Item = ({ name, image, price, description, stock }) => {
             <h6>${price}</h6>
           </Card.Body>
           <Card.Body>
-            <ItemCount stock={stock} initial={1} />
+            <Link to={`/detail/${id}`}>
+              <Button
+                size="sm"
+                onClick={() => alert("Click Buy!")}
+                className="dark--color">
+                View Detail
+              </Button>
+            </Link>
           </Card.Body>
+          {/* <Card.Body>
+            <ItemCount stock={stock} initial={1} />
+          </Card.Body> */}
         </Card.Body>
       </Card>
     </>

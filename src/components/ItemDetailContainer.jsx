@@ -1,17 +1,16 @@
 import React from "react";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import ItemDetail from "./ItemDetail";
 
-const ItemDetailContainer = () => {
+const ItemDetailContainer = ({ items }) => {
   return (
     <Container>
       <Container>
-        <Row className="mt-3">
-          <h1>{greeting}</h1>
-        </Row>
-      </Container>
-      <Container>
         <Row>
           <Col className="mt-3">
-            <Item />
+            <ItemDetail items={items} />
           </Col>
         </Row>
       </Container>

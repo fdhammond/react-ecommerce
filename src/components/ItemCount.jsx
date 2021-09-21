@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
+import { Link } from "react-router-dom";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
@@ -48,14 +49,7 @@ const ItemCount = ({ stock, initial }) => {
           +
         </Button>
       </Container>
-      <Container className="d-flex mt-3 p-0 justify-content-center">
-        <Button
-          size="sm"
-          onClick={() => alert("Click Buy!")}
-          className="dark--color">
-          Buy
-        </Button>
-      </Container>
+      <Container className="d-flex mt-3 p-0 justify-content-center"></Container>
     </>
   );
 };

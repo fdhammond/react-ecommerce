@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import Item from "../components/Item";
 import Container from "react-bootstrap/Container";
+import Button from "react-bootstrap/Button";
+import { Link } from "react-router-dom";
 
-let products = [
+export const products = [
   {
     id: 1,
     name: "guitar-1",
@@ -105,49 +107,23 @@ let products = [
   },
 ];
 
-const getData = () =>
-  new Promise((resolve, reject) => {
-    setTimeout(() => {
-      resolve(products);
-    }, 2000);
-  });
-
 const ItemList = () => {
-  const [items, setItems] = useState([]);
-
-  const fetchData = () => {
-    getData()
-      .then((result) => {
-        setItems(result);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  };
-
-  useEffect(() => {
-    fetchData();
-  }, []);
-
-  console.log(items);
-
   return (
-    <>
-      <Container
-        className="d-flex m-0 p-0 justify-content-center"
-        style={{ width: "100%", flexWrap: "wrap" }}>
-        {items.map((productos) => (
-          <Item
-            key={productos.id}
-            name={productos.name}
-            image={productos.image}
-            price={productos.price}
-            description={productos.description}
-            stock={productos.stock}
-          />
-        ))}
-      </Container>
-    </>
+    <Container
+      className="d-flex m-0 p-0 justify-content-center"
+      style={{ width: "100%", flexWrap: "wrap" }}>
+      {products.map((productos) => (
+        <Item
+          id={productos.id}
+          name={productos.name}
+          image={productos.image}
+          price={productos.price}
+          description={productos.description}
+          stock={productos.stock}
+          category={productos.category}
+        />
+      ))}
+    </Container>
   );
 };
 
