@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 import { products } from "./ItemList";
-import products from "./ItemList";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import CardImg from "react-bootstrap/CardImg";
@@ -13,6 +12,8 @@ import { Link, NavLink } from "react-router-dom";
 const ItemDetail = () => {
   const [productos, setProductos] = useState({});
   const { id } = useParams();
+
+  const getProducts = products.filter((item) => item.id === productos.id);
 
   const getData = () =>
     new Promise((resolve) => {
