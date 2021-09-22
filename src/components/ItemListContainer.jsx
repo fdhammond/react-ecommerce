@@ -21,23 +21,23 @@ const ItemListContainer = () => {
 
   useEffect(() => {
     getData()
-    .then((result) => {
-      console.log("test111111111111111", result);
-      if (idCategory) {
-        const filterCategory = result.filter(
-          (item) => item.category.toLowerCase() === idCategory
-          )
+      .then((result) => {
+        console.log("test111111111111111", result);
+        if (idCategory) {
+          const filterCategory = result.filter(
+            (item) => item.category.toLowerCase() === idCategory
+          );
 
-        console.log("test3", setProductos(filterCategory));
-        setProductos(filterCategory);
-      } else {
-        setProductos(result);
-      }
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-  }, []);
+          console.log("test3", setProductos(filterCategory));
+          setProductos(filterCategory);
+        } else {
+          setProductos(result);
+        }
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, [idCategory]);
 
   return (
     <Container>

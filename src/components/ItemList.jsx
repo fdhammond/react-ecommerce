@@ -107,20 +107,20 @@ export const products = [
   },
 ];
 
-const ItemList = () => {
+const ItemList = ({ productos }) => {
   return (
     <Container
       className="d-flex m-0 p-0 justify-content-center"
       style={{ width: "100%", flexWrap: "wrap" }}>
-      {products.map((productos) => (
+      {productos.map((prod) => (
         <Item
-          id={productos.id}
-          name={productos.name}
-          image={productos.image}
-          price={productos.price}
-          description={productos.description}
-          stock={productos.stock}
-          category={productos.category}
+          id={prod.id}
+          name={prod.name}
+          image={prod.image}
+          price={prod.price}
+          description={prod.description}
+          stock={prod.stock}
+          category={prod.category}
         />
       ))}
     </Container>
