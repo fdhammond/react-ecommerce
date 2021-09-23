@@ -22,7 +22,7 @@ function App() {
             <Route exact path="/category/:idCategory">
               <ItemListContainer />
             </Route>
-            <Route exact path="/detail/:id">
+            <Route exact path="/detail/:idDetail">
               <ItemDetailContainer />
             </Route>
             <Route exact path="/cart" component={Cart} />

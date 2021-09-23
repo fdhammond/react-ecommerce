@@ -22,7 +22,6 @@ const ItemListContainer = () => {
   useEffect(() => {
     getData()
       .then((result) => {
-        console.log("test111111111111111", result);
         if (idCategory) {
           const filterCategory = result.filter(
             (item) => item.category.toLowerCase() === idCategory

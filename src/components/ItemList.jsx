@@ -108,6 +108,7 @@ export const products = [
 ];
 
 const ItemList = ({ productos }) => {
+  console.log('productos', productos)
   return (
     <Container
       className="d-flex m-0 p-0 justify-content-center"

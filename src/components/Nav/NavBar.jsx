@@ -37,7 +37,7 @@ const NavBar = () => {
                   Search
                 </Button>
               </Form>
-              <Nav.Link className="nav-spacing">
+              <Nav.Link className="nav-spacing" href="/cart">
                 <CartWidget />
               </Nav.Link>
             </Nav>

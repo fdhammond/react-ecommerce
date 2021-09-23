@@ -41,7 +41,6 @@ const Item = ({ id, category, name, image, price, description, stock }) => {
             <Link to={`/detail/${id}`}>
               <Button
                 size="sm"
-                onClick={() => alert("Click Buy!")}
                 className="dark--color">
                 View Detail
               </Button>

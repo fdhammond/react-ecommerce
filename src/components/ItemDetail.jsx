@@ -9,36 +9,11 @@ import ItemCount from "./ItemCount";
 import "../App.css";
 import { Link, NavLink } from "react-router-dom";
 
-const ItemDetail = () => {
-  const [productos, setProductos] = useState({});
-  const { id } = useParams();
-
-  const getProducts = products.filter((item) => item.id === productos.id);
-
-  const getData = () =>
-    new Promise((resolve) => {
-      setTimeout(() => {
-        resolve(products);
-      }, 2000);
-    });
-
-  const fetchData = () => {
-    getData()
-      .then((result) => {
-        setProductos(result);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  };
-
-  useEffect(() => {
-    fetchData();
-    console.log(productos);
-  }, [id]);
+const ItemDetail = ({productos}) => {
   return (
     <>
       <Card
+        key={productos.id}
         className="m-3 p-0"
         style={{
           width: "15rem",
@@ -61,15 +36,15 @@ const ItemDetail = () => {
           <Card.Title className="d-flex justify-content-center">
             {productos.name}
           </Card.Title>
-          {/* <Card.Text>
-              {description}
-            </Card.Text> */}
+          <Card.Text>
+              {productos.description}
+          </Card.Text>
           <Card.Body className="d-flex justify-content-center">
             <h6>${productos.price}</h6>
           </Card.Body>
-          {/* <Card.Body>
-            <ItemCount stock={stock} initial={1} />
-          </Card.Body> */}
+          <Card.Body>
+            <ItemCount stock={productos.stock} initial={1} />
+          </Card.Body>
         </Card.Body>
       </Card>
     </>
