@@ -8,8 +8,21 @@ import CardImg from "react-bootstrap/CardImg";
 import ItemCount from "./ItemCount";
 import "../App.css";
 import { Link, NavLink } from "react-router-dom";
+import {useCartContext} from "../cartContext/cartContext";
+import {CartContextProvider} from "../App"
 
-const ItemDetail = ({productos}) => {
+const ItemDetail = ({ productos }) => {
+
+  const { addToCart } = useCartContext();
+
+  console.log('addToCart', addToCart)
+
+  const onAdd = (quantity) => {
+    addToCart({ productos: productos, cantidad: quantity })
+  }
+  console.log(addToCart)
+
+
   return (
     <>
       <Card
@@ -43,7 +56,7 @@ const ItemDetail = ({productos}) => {
             <h6>${productos.price}</h6>
           </Card.Body>
           <Card.Body>
-            <ItemCount stock={productos.stock} initial={1} />
+            <ItemCount stock={productos.stock} initial={1} onAdd={onAdd}/>
           </Card.Body>
         </Card.Body>
       </Card>
