@@ -27,7 +27,7 @@ export default function CartContextProvider({ children }) {
     setCartList([...deleteProductFromCart])
 }
   return (
-    <cartContext.Provider value={(cartList, addToCart, deleteList, deleteFromCart)}>
+    <cartContext.Provider value={{ cartList, addToCart, deleteList, deleteFromCart }}>
       {children}
     </cartContext.Provider>
 )
