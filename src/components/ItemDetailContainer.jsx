@@ -23,7 +23,6 @@ const ItemDetailContainer = () => {
       .then((result) => {
           const filterId = result.filter((item) => item.id == idDetail)
         setProductos(...filterId)
-        console.log(...filterId)
       })
       .catch((err) => {
         console.log(err);

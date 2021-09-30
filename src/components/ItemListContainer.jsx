@@ -17,7 +17,6 @@ const ItemListContainer = () => {
       }, 2000);
     });
 
-  console.log(idCategory);
 
   useEffect(() => {
     getData()
@@ -27,7 +26,6 @@ const ItemListContainer = () => {
             (item) => item.category.toLowerCase() === idCategory
           );
 
-          console.log("test3", setProductos(filterCategory));
           setProductos(filterCategory);
         } else {
           setProductos(result);
@@ -36,7 +34,7 @@ const ItemListContainer = () => {
       .catch((err) => {
         console.log(err);
       });
-  }, [idCategory]);
+  }, []);
 
   return (
     <Container>

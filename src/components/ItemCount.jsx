@@ -2,9 +2,6 @@ import React from "react";
 import { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
-import {useCartContext} from "../cartContext/cartContext";
-
-
 
 const ItemCount = ({ stock, initial, onAdd }) => {
   const [counter, setCounter] = useState(initial);
@@ -20,7 +17,7 @@ const ItemCount = ({ stock, initial, onAdd }) => {
 
   const reduceCounter = () => {
     if (counter <= stock && counter >= initial) {
-      console.log(counter);
+
       setCounter(counter - 1);
       return counter;
     } else {

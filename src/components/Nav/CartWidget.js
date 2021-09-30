@@ -1,10 +1,10 @@
 import React from 'react';
-import { BsBag } from "react-icons/bs";
+import { Cart4 } from "react-bootstrap-icons";
 
-const CartWidget = () => {
+export const CartWidget = ({quantity}) => {
     return (
         <div>
-             <BsBag className="nav-warning--color"/>
+            <Cart4 size={30}/>
         </div>
     );
 };

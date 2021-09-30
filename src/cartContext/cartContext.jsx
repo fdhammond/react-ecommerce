@@ -7,17 +7,29 @@ export const useCartContext = () => useContext(cartContext)
 export default function CartContextProvider({ children }) {
   const [cartList, setCartList] = useState([]);
 
-  const addToCart = (data) => {
-    const arrayCart = [...cartList]
-
-    if (arrayCart.some(i => i.product.id === DataTransfer.product.id)) {
-      console.log('arraycart, ', arrayCart)
-      arrayCart.find(i => i.product.id === data.product.id).quantity += data.quantity
-        setCartList(arrayCart)
-      } else {
-        setCartList([...cartList, data])
-      }
+  const addToCart = data => {
+    const oldCart = [...cartList]
+    // if we have same item
+    if (oldCart.some(i => i.productos.id === data.productos.id)) {
+      // if we find the item we add only the number of that item
+      oldCart.find(i => i.productos.id === data.productos.id).quantity += data.quantity
+      console.log("data.quantity", data.quantity);
+      setCartList(oldCart)
+    } else {
+      setCartList([...cartList, data])
     }
+  }
+
+  console.log('oldCart afuera', cartList)
+
+  const iconCart = () => {
+    return cartList.reduce((total, value) => total + value.quantity, 0)
+  }
+
+  const totalPrice = () => {
+    return cartList.reduce((total, value) => (total + (value.quantity * value.productos.price)), 0)
+  }
+
   function deleteList() {
     cartList([]);
   }
@@ -27,7 +39,7 @@ export default function CartContextProvider({ children }) {
     setCartList([...deleteProductFromCart])
 }
   return (
-    <cartContext.Provider value={{ cartList, addToCart, deleteList, deleteFromCart }}>
+    <cartContext.Provider value={{ cartList, addToCart, deleteList, deleteFromCart, iconCart }}>
       {children}
     </cartContext.Provider>
 )

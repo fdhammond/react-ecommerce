@@ -1,9 +1,8 @@
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import CardImg from "react-bootstrap/CardImg";
-import ItemCount from "./ItemCount";
 import "../App.css";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Item = ({ id, category, name, image, price, description, stock }) => {
   return (

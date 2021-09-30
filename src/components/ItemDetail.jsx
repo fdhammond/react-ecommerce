@@ -1,27 +1,16 @@
-import React, { useState, useEffect, useContext } from "react";
-import { useParams } from "react-router-dom";
-import Container from "react-bootstrap/Container";
-import { products } from "./ItemList";
 import Card from "react-bootstrap/Card";
-import Button from "react-bootstrap/Button";
 import CardImg from "react-bootstrap/CardImg";
 import ItemCount from "./ItemCount";
 import "../App.css";
-import { Link, NavLink } from "react-router-dom";
 import {useCartContext} from "../cartContext/cartContext";
-import {CartContextProvider} from "../App"
 
 const ItemDetail = ({ productos }) => {
 
   const { addToCart } = useCartContext();
 
-  console.log('addToCart', addToCart)
-
-  const onAdd = (quantity) => {
-    addToCart({ productos: productos, cantidad: quantity })
+  const onAdd = (quant) => {
+    addToCart({ productos: productos, quantity: quant })
   }
-  console.log(addToCart)
-
 
   return (
     <>

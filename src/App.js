@@ -6,7 +6,6 @@ import ItemListContainer from "./components/ItemListContainer";
 import Footer from "./components/Footer";
 import Cart from "./components/Cart";
 import ItemDetailContainer from "./components/ItemDetailContainer";
-import { useState, createContext } from "react";
 import CartContextProvider from "./cartContext/cartContext";
 
 function App() {
