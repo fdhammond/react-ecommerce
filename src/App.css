@@ -1,3 +1,7 @@
+* {
+  text-decoration: none !important;
+}
+
 .nav-spacing {
   margin-left: 12px;
 }

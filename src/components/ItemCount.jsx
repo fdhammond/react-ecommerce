@@ -4,14 +4,12 @@ import Button from "react-bootstrap/Button";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
 import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
   Link
 } from "react-router-dom";
 
 const ItemCount = ({ stock, initial, onAdd }) => {
   const [counter, setCounter] = useState(initial);
+  const [changeButton, setChangeButton] = useState(false);
 
   const addCounter = () => {
     if (stock > counter) {
@@ -33,12 +31,18 @@ const ItemCount = ({ stock, initial, onAdd }) => {
 
   const addToCart = () => {
     onAdd(counter)
+    setChangeButton(true)
   }
+
 
   return (
     <>
       <Container className="d-flex m-0 p-0 justify-content-between">
-        <Button
+      {
+          !changeButton
+            ?
+            <>
+            <Button
           onClick={() => reduceCounter()}
           className="rounded-circle nav-warning--color"
           variant="warning"
@@ -55,14 +59,24 @@ const ItemCount = ({ stock, initial, onAdd }) => {
           style={{ color: "white" }}>
           +
         </Button>
+          </>
+            :
+          null
+      }
       </Container>
       <Container className="d-flex mt-3 p-0 justify-content-center">
-      <Link to="/cart">
-        <Button
-          onClick={() => addToCart()}
-        >
-          Buy</Button>
-      </Link>
+        {
+          !changeButton ? <Button onClick={() => addToCart()}>Buy</Button>
+          :
+          <div>
+          <Link to="/cart">
+            <Button>Finalizar Compra</Button>
+          </Link>
+          <Link to="/">
+          <Button>Seguir Comprando</Button>
+          </Link>
+          </div>
+        }
       </Container>
     </>
   );

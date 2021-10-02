@@ -7,9 +7,6 @@ import Container from "react-bootstrap/Container";
 import CardImg from "react-bootstrap/CardImg";
 import TrashIcon from "./TrashIcon";
 import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
   Link
 } from "react-router-dom";
 

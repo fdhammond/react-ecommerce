@@ -22,14 +22,18 @@ const NavBar = (props) => {
     <Fragment>
       <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
         <Container>
-          <Link to="/">MusicLand</Link>
+          <Link to="/">
+          <Navbar.Brand>
+            <a className="nav-warning--color" style={{ color: '#ffc107' }}>MusicLand</a>
+          </Navbar.Brand>
+          </Link>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="me-auto">
-              <Link to="/category/electric">
+            <Nav className="me-auto" style={{ color: 'white'}}>
+              <Link to="/category/electric" className="d-flex m-3">
                 <a className="nav-warning--color">Electric</a>
               </Link>
-              <Link to="/category/acoustic">
+              <Link to="/category/acoustic" className="d-flex m-3">
                 <a className="nav-warning--color">Acoustic</a>
               </Link>
             </Nav>
