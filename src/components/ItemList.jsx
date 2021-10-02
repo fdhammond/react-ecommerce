@@ -12,7 +12,7 @@ export const products = [
     image:
       "https://res.cloudinary.com/dzkqopnby/image/upload/v1631247467/react-ecommerce/pngfind.com-electric-guitar-png-18298_ikw7he.png",
     price: "1500",
-    description: "Breve DESCRIPCION del producto",
+    description: "The guitar has own place in traditional art creation and it has also become popular in many favorite genres",
     stock: 5
   },
   {
@@ -22,7 +22,7 @@ export const products = [
     image:
       "https://res.cloudinary.com/dzkqopnby/image/upload/v1631247451/react-ecommerce/pngfind.com-electric-guitar-png-19026_xmr065.png",
     price: "500",
-    description: "Breve descripcion del producto",
+    description: "The guitar has own place in traditional art creation and it has also become popular in many favorite genres",
     stock: 5
   },
   {
@@ -32,7 +32,7 @@ export const products = [
     image:
       "https://res.cloudinary.com/dzkqopnby/image/upload/v1631247449/react-ecommerce/pngfind.com-guitar-png-1034724_ggylpi.png",
     price: "1200",
-    description: "Breve RESUMEN del producto",
+    description: "The guitar has own place in traditional art creation and it has also become popular in many favorite genres",
     stock: 5
   },
   {
@@ -42,7 +42,7 @@ export const products = [
     image:
       "https://res.cloudinary.com/dzkqopnby/image/upload/v1631247446/react-ecommerce/pngfind.com-guitar-png-597285_df9dfp.png",
     price: "1000",
-    description: "Breve descripcion del producto",
+    description: "The guitar has own place in traditional art creation and it has also become popular in many favorite genres",
     stock: 5
   },
   {
@@ -52,7 +52,7 @@ export const products = [
     image:
       "https://res.cloudinary.com/dzkqopnby/image/upload/v1631247444/react-ecommerce/pngfind.com-electric-guitar-png-18428_roynvz.png",
     price: "5000",
-    description: "Breve descripcion del producto",
+    description: "The guitar has own place in traditional art creation and it has also become popular in many favorite genres",
     stock: 5
   },
   {
@@ -62,7 +62,7 @@ export const products = [
     image:
       "https://res.cloudinary.com/dzkqopnby/image/upload/v1631475156/react-ecommerce/152621-guitar-photos-black-rock-free-download-png-hq_drkiio.png",
     price: "3000",
-    description: "Breve descripcion del producto",
+    description: "The guitar has own place in traditional art creation and it has also become popular in many favorite genres",
     stock: 5
   },
   {
@@ -72,7 +72,7 @@ export const products = [
     image:
       "https://res.cloudinary.com/dzkqopnby/image/upload/v1631759203/react-ecommerce/acustic4_jl1agk.png",
     price: "3200",
-    description: "Breve descripcion del producto",
+    description: "The guitar has own place in traditional art creation and it has also become popular in many favorite genres",
     stock: 5
   },
   {
@@ -82,7 +82,7 @@ export const products = [
     image:
       "https://res.cloudinary.com/dzkqopnby/image/upload/v1631759194/react-ecommerce/acustic3_jpoe6s.png",
     price: "1200",
-    description: "Breve descripcion del producto",
+    description: "The guitar has own place in traditional art creation and it has also become popular in many favorite genres",
     stock: 5
   },
   {
@@ -92,7 +92,7 @@ export const products = [
     image:
       "https://res.cloudinary.com/dzkqopnby/image/upload/v1631759180/react-ecommerce/acustic1_qsz49i.png",
     price: "5400",
-    description: "Breve descripcion del producto",
+    description: "The guitar has own place in traditional art creation and it has also become popular in many favorite genres",
     stock: 5
   },
   {
@@ -102,7 +102,7 @@ export const products = [
     image:
       "https://res.cloudinary.com/dzkqopnby/image/upload/v1631759012/react-ecommerce/acustic2_zeie1f.png",
     price: "2300",
-    description: "Breve descripcion del productoo",
+    description: "The guitar has own place in traditional art creation and it has also become popular in many favorite genreso",
     stock: 5
   },
 ];

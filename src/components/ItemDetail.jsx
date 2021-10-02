@@ -18,7 +18,7 @@ const ItemDetail = ({ productos }) => {
         key={productos.id}
         className="m-3 p-0"
         style={{
-          width: "15rem",
+          width: "20%",
           height: "auto",
           borderRadius: "14px",
           backgroundColor: "#f8f9fa",
@@ -35,10 +35,10 @@ const ItemDetail = ({ productos }) => {
         <Card.Body
           className="sampleStyle"
           style={{ width: "100%", height: "auto" }}>
-          <Card.Title className="d-flex justify-content-center">
+          <Card.Title className="mb-3 d-flex justify-content-center">
             {productos.name}
           </Card.Title>
-          <Card.Text>
+          <Card.Text className="m-3 p-3 d-flex justify-content-center" style={{ textAlign: "center" }}>
               {productos.description}
           </Card.Text>
           <Card.Body className="d-flex justify-content-center">

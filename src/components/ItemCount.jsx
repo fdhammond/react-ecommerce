@@ -1,7 +1,14 @@
 import React from "react";
 import { useState } from "react";
 import Button from "react-bootstrap/Button";
+import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
 const ItemCount = ({ stock, initial, onAdd }) => {
   const [counter, setCounter] = useState(initial);
@@ -17,7 +24,6 @@ const ItemCount = ({ stock, initial, onAdd }) => {
 
   const reduceCounter = () => {
     if (counter <= stock && counter >= initial) {
-
       setCounter(counter - 1);
       return counter;
     } else {
@@ -51,10 +57,12 @@ const ItemCount = ({ stock, initial, onAdd }) => {
         </Button>
       </Container>
       <Container className="d-flex mt-3 p-0 justify-content-center">
+      <Link to="/cart">
         <Button
           onClick={() => addToCart()}
         >
           Buy</Button>
+      </Link>
       </Container>
     </>
   );

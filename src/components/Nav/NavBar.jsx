@@ -8,7 +8,12 @@ import FormControl from "react-bootstrap/FormControl";
 import Button from "react-bootstrap/Button";
 import CartWidget from "./CartWidget";
 import {useCartContext} from "../../cartContext/cartContext";
-
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
 const NavBar = (props) => {
   const { count } = props
@@ -17,16 +22,16 @@ const NavBar = (props) => {
     <Fragment>
       <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
         <Container>
-          <Navbar.Brand>MusicLand</Navbar.Brand>
+          <Link to="/">MusicLand</Link>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link href="/category/electric">
+              <Link to="/category/electric">
                 <a className="nav-warning--color">Electric</a>
-              </Nav.Link>
-              <Nav.Link href="/category/acoustic">
+              </Link>
+              <Link to="/category/acoustic">
                 <a className="nav-warning--color">Acoustic</a>
-              </Nav.Link>
+              </Link>
             </Nav>
             <Nav>
               <Form className="d-flex">
@@ -40,9 +45,9 @@ const NavBar = (props) => {
                   Search
                 </Button>
               </Form>
-              <Nav.Link className="nav-spacing" href="/cart">
+              <Link className="nav-spacing" to="/cart">
                 <CartWidget />
-              </Nav.Link>
+              </Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
