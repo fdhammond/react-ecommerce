@@ -37,7 +37,7 @@ const Home = () => {
                 <Row
                 style={{
                     minWidth: '150px',
-                    marginTop: '150px',
+                    marginTop: '200px',
                     display: 'flex',
                     flexWrap: 'wrap'
                 }}
