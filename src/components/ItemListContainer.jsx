@@ -10,44 +10,31 @@ const ItemListContainer = () => {
   const [productos, setProductos] = useState([]);
   const { idCategory } = useParams();
 
-  // const getData = () =>
-  //   new Promise((resolve) => {
-  //     setTimeout(() => {
-  //       resolve(products);
-  //     }, 2000);
-  //   });
-
-
   useEffect(() => {
 
-    const dbquery = getFirestore()
-    dbquery.collection('items').get()
-      .then(res => {
-        setProductos( res.docs.map(producto => ({ id: producto.id, ...producto.data() })) )
-      })
+    if (idCategory) {
+      console.log('idCategory:', idCategory)
+      const dbquery = getFirestore()
+      dbquery.collection('items').where('categoryId', '==', idCategory).get()
+        .then(res => {
+          setProductos(res.docs.map(producto => ({ id: producto.id, ...producto.data() })))
+        })
       .catch(err => console.log(err))
       .finally(() => console.log('loading'))
 
-      // getData()
-      //   .then((result) => {
-      //     if (idCategory) {
-      //       const filterCategory = result.filter(
-      //         (item) => item.category.toLowerCase() === idCategory
-      //       );
-
-      //       setProductos(filterCategory);
-      //     } else {
-      //       setProductos(result);
-      //     }
-      //   })
-      //   .catch((err) => {
-      //     console.log(err);
-      //   });
-      }, [idCategory]);
+    } else {
+      const dbquery = getFirestore()
+      dbquery.collection('items').get()
+        .then(res => {
+          setProductos( res.docs.map(producto => ({ id: producto.id, ...producto.data() })))
+        })
+        .catch(err => console.log(err))
+        .finally(() => console.log('loading'))
+      }
+  }, [idCategory]);
 
 
-      console.log(productos)
-
+  console.log('productos', productos)
 
   return (
     <Container>
