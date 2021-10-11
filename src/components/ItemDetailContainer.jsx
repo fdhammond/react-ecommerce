@@ -18,24 +18,26 @@ const ItemDetailContainer = () => {
   //       resolve(products);
   //     }, 2000);
   //   });
-
   useEffect(() => {
-        //itemDetailContainer
-    const dbquery = getFirestore()
-    dbquery.collection('items').doc(idDetail).get()
-        .then(res => console.log('respuesta', res))
-        .catch(err => console.log(err))
-        .finally(() => console.log('loading'))
 
-    // getData()
-    //   .then((result) => {
-    //       const filterId = result.filter((item) => item.id == idDetail)
-    //     setProductos(...filterId)
-    //   })
-    //   .catch((err) => {
-    //     console.log(err);
-    //   });
-  }, []);
+  if (idDetail) {
+      //itemDetailContainer
+  const dbquery = getFirestore()
+  dbquery.collection('items').where('categoryId', '==', idDetail).get()
+    .then(res => setProductos({ id: productos.id, ...productos.data() }))
+    .catch(err => console.log(err))
+    .finally(() => console.log('loading'))
+
+} else {
+      //itemDetailContainer
+  const dbquery = getFirestore()
+  dbquery.collection('items').doc(idDetail).get()
+    .then(res => setProductos({ id: productos.id, ...productos.data() }))
+    .catch(err => console.log(err))
+    .finally(() => console.log('loading'))
+  }
+}, []);
+
   return (
     <Container>
       <Container>

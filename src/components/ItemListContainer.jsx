@@ -3,7 +3,6 @@ import ItemList from "./ItemList";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import { products } from "./ItemList";
 import { useParams } from "react-router";
 import { getFirestore } from "../services/getFirebase";
 
