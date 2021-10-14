@@ -1,3 +1,4 @@
+import React from 'react';
 import Card from "react-bootstrap/Card";
 import CardImg from "react-bootstrap/CardImg";
 import ItemCount from "./ItemCount";

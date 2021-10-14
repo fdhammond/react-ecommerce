@@ -7,17 +7,11 @@ import Form from "react-bootstrap/Form";
 import FormControl from "react-bootstrap/FormControl";
 import Button from "react-bootstrap/Button";
 import CartWidget from "./CartWidget";
-import {useCartContext} from "../../cartContext/cartContext";
 import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
   Link
 } from "react-router-dom";
 
 const NavBar = (props) => {
-  const { count } = props
-  const {iconCart} = useCartContext()
   return (
     <Fragment>
       <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">

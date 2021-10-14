@@ -5,7 +5,6 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import ItemDetail from "./ItemDetail";
-import { products } from "./ItemList";
 
 
 const ItemDetailContainer = () => {
@@ -18,7 +17,7 @@ const ItemDetailContainer = () => {
   .then(res => setProductos({ id: productos.id, ...productos.data() }))
   .catch(err => console.log(err))
   .finally(() => console.log('loading'))
-}, []);
+}, [idDetail]);
 
   return (
     <Container>

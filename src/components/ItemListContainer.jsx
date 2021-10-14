@@ -5,9 +5,11 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { useParams } from "react-router";
 import { getFirestore } from "../services/getFirebase";
+import RingLoader from "react-spinners/RingLoader";
 
 const ItemListContainer = () => {
   const [productos, setProductos] = useState([]);
+  const [loading, setLoading] = useState(true);
   const { idCategory } = useParams();
 
   useEffect(() => {
@@ -20,7 +22,7 @@ const ItemListContainer = () => {
           setProductos(res.docs.map(producto => ({ id: producto.id, ...producto.data() })))
         })
       .catch(err => console.log(err))
-      .finally(() => console.log('loading'))
+      .finally(() => setLoading(false))
 
     } else {
       const dbquery = getFirestore()
@@ -29,7 +31,7 @@ const ItemListContainer = () => {
           setProductos( res.docs.map(producto => ({ id: producto.id, ...producto.data() })))
         })
         .catch(err => console.log(err))
-        .finally(() => console.log('loading'))
+        .finally(() => setLoading(false))
       }
   }, [idCategory]);
 
@@ -39,11 +41,22 @@ const ItemListContainer = () => {
   return (
     <Container>
       <Container>
-        <Row>
-          <Col className="mt-3">
-            <ItemList productos={productos} />
-          </Col>
-        </Row>
+
+            {
+              loading
+            ?
+            <Row style={{ margin: "0 auto" }}>
+              <RingLoader loading={loading} size={150} />
+            </Row>
+            :
+              <Row>
+                <Col className="mt-3">
+                  <ItemList productos={productos} />
+                </Col>
+              </Row>
+            }
+
+
       </Container>
     </Container>
   );
