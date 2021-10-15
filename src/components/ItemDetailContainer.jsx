@@ -14,7 +14,10 @@ const ItemDetailContainer = () => {
   useEffect(() => {
   const dbquery = getFirestore()
   dbquery.collection('items').doc(idDetail).get()
-  .then(res => setProductos({ id: productos.id, ...productos.data() }))
+    .then(res => {
+      console.log('ressssssss:', res)
+      setProductos({ id: res.id, ...res.data() })
+    })
   .catch(err => console.log(err))
   .finally(() => console.log('loading'))
 }, [idDetail]);
