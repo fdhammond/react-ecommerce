@@ -65,15 +65,17 @@ const ItemCount = ({ stock, initial, onAdd }) => {
       </Container>
       <Container className="d-flex mt-3 p-0 justify-content-center">
         {
-          !changeButton ? <Button onClick={() => addToCart()}>Buy</Button>
+          !changeButton ? <Button className="dark--color" onClick={() => addToCart()}>Buy</Button>
           :
           <div>
+          <Container style={{ textAlign: "center" }}>
           <Link to="/cart">
-            <Button>Finalizar Compra</Button>
+            <Button className="dark--color">Go Cart</Button>
           </Link>
           <Link to="/products">
-          <Button>Seguir Comprando</Button>
+          <Button className="dark--color">Keep Shopping</Button>
           </Link>
+          </Container>
           </div>
         }
       </Container>

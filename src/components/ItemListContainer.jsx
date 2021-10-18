@@ -40,7 +40,7 @@ const ItemListContainer = () => {
 
   return (
     <Container>
-      <Container>
+
 
             {
               loading
@@ -57,7 +57,6 @@ const ItemListContainer = () => {
             }
 
 
-      </Container>
     </Container>
   );
 };

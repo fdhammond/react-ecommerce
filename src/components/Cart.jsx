@@ -71,7 +71,7 @@ const Cart = () => {
               {
                 totalPrice(cartList) > 0 ? <div><h2>Total Price: ${totalPrice(cartList)}</h2><Button onClick={() => deleteList()}>Empty cart</Button></div>
                   :
-                <div><h2>You dont have products on cart!</h2> <Link to="/"><Button variant="warning">Go back to Products</Button></Link></div>
+                <div><h2>You dont have products on cart!</h2> <Link to="/products"><Button variant="warning">Go back to Products</Button></Link></div>
               }
             </Row>
       </Container>

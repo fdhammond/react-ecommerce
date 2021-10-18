@@ -37,18 +37,15 @@ const Item = ({ id, category, name, image, price, description, stock }) => {
           <Card.Body className="d-flex justify-content-center">
             <h6>${price}</h6>
           </Card.Body>
-          <Card.Body>
+          <Card.Body className="d-flex justify-content-center">
             <Link to={`/detail/${id}`}>
               <Button
-                size="sm"
+                size="md"
                 className="dark--color">
-                View Detail
+                Buy
               </Button>
             </Link>
           </Card.Body>
-          {/* <Card.Body>
-            <ItemCount stock={stock} initial={1} />
-          </Card.Body> */}
         </Card.Body>
       </Card>
     </>
