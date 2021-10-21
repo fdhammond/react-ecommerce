@@ -21,7 +21,6 @@ const Home = () => {
             />
             </video>
 
-
             <Container
                 style={{
                     margin: '0 auto',

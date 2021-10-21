@@ -6,6 +6,7 @@ export const useCartContext = () => useContext(cartContext)
 
 export default function CartContextProvider({ children }) {
   const [cartList, setCartList] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   const addToCart = data => {
     const oldCart = [...cartList]
@@ -18,8 +19,6 @@ export default function CartContextProvider({ children }) {
       setCartList([...cartList, data])
     }
   }
-
-  console.log('oldCart afuera', cartList)
 
   const iconCart = () => {
     return cartList.reduce((total, value) => total + value.quantity, 0)
@@ -37,8 +36,9 @@ export default function CartContextProvider({ children }) {
     const deleteProductFromCart = cartList.filter((prod) => prod.productos.id !== item.productos.id)
     setCartList([...deleteProductFromCart])
 }
+
   return (
-    <cartContext.Provider value={{ cartList, addToCart, deleteList, deleteFromCart, iconCart, setCartList, totalPrice }}>
+    <cartContext.Provider value={{ cartList, loading, setLoading, addToCart, deleteList, deleteFromCart, iconCart, setCartList, totalPrice }}>
       {children}
     </cartContext.Provider>
 )

@@ -5,7 +5,7 @@ import CardImg from "react-bootstrap/CardImg";
 import "../App.css";
 import { Link } from "react-router-dom";
 
-const Item = ({ id, category, name, image, price, description, stock }) => {
+const Item = ({ id, name, image, price }) => {
   return (
     <>
       <Card
@@ -31,9 +31,6 @@ const Item = ({ id, category, name, image, price, description, stock }) => {
           <Card.Title className="d-flex justify-content-center">
             {name}
           </Card.Title>
-          {/* <Card.Text>
-              {description}
-            </Card.Text> */}
           <Card.Body className="d-flex justify-content-center">
             <h6>${price}</h6>
           </Card.Body>
