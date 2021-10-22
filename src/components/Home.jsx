@@ -65,9 +65,7 @@ const Home = () => {
                     </Col>
                 </Row>
 
-                <Row
-                style={{ minWidth: '450px' }}
-                >
+                <Row className="d-flex m-5 justify-content-center">
                 <Col>
                 <div>
                 <Link to="/products"
@@ -80,32 +78,12 @@ const Home = () => {
                         alignItems: 'center',
                         fontFamily: 'Roboto',
                         fontSize: '1em',
-                        color: 'white'
+                        color: 'white',
+                        textAlign: 'center'
                 }}
                 >
                 <span className="nav-warning--color">
                 Visit our products!
-                </span>
-                </Link>
-                </div>
-                </Col>
-                <Col>
-                <div>
-                <Link to="/products"
-                    style={{
-                        marginTop: '50px',
-                        border: '5px solid white',
-                        padding: '25px',
-                        display: 'flex',
-                        justifyContent: 'center',
-                        alignItems: 'center',
-                        fontFamily: 'Roboto',
-                        fontSize: '1em',
-                        color: 'white'
-                }}
-                >
-                <span className="nav-warning--color">
-                Contact Us!
                 </span>
                 </Link>
                 </div>

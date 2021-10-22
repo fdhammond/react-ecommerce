@@ -19,7 +19,7 @@ const ItemDetail = ({ productos }) => {
         key={productos.id}
         className="m-3 p-0"
         style={{
-          width: "20%",
+          maxWidth: "350px",
           height: "auto",
           borderRadius: "14px",
           backgroundColor: "#f8f9fa",
@@ -29,7 +29,7 @@ const ItemDetail = ({ productos }) => {
           <CardImg
             variant="top"
             src={productos.image}
-            style={{ width: "50%", height: "auto" }}
+            style={{ maxWidth: "50%", height: "auto" }}
           />
         </Card.Body>
 

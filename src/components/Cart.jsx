@@ -23,7 +23,7 @@ const Cart = () => {
         key={item.productos.id}
         className="m-3 p-0"
         style={{
-          width: "15rem",
+          maxWidth: "350px",
           height: "auto",
           borderRadius: "14px",
           backgroundColor: "#f8f9fa",
@@ -42,7 +42,7 @@ const Cart = () => {
           <Card.Title className="mb-3 d-flex justify-content-center">
             {item.productos.name}
           </Card.Title>
-          <Card.Text className="d-flex justify-content-center">
+          <Card.Text className="d-flex justify-content-center" style={{ textAlign: 'center' }}>
               {item.productos.description}
           </Card.Text>
           <Card.Body className="d-flex justify-content-center">
