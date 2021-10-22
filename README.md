@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## ReactJS simple ecommerce - CoderHouse ReactJS Course
 
-Este proyecto fue desarrollado durante el curso de CoderHouse ReactJS.
+This project was developed during the CoderHouse ReactJS course.
 
 ## Tech Used
 
