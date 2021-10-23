@@ -5,7 +5,6 @@ import {
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
-import GuitarPlayer from "../video/GuitarPlayer.mp4"
 
 const Home = () => {
     return (
@@ -17,7 +16,7 @@ const Home = () => {
             }}
             >
             <source
-                src={GuitarPlayer} type="video/mp4"
+                src='https://res.cloudinary.com/dzkqopnby/video/upload/v1634953229/react-ecommerce/GuitarPlayer_vcxtfa.mp4' type="video/mp4"
             />
             </video>
 
