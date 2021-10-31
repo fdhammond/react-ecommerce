@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
 import "././../../App.css";
 import Navbar from "react-bootstrap/NavBar";
+import NavDropdown from "react-bootstrap/NavDropdown";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
@@ -23,26 +24,26 @@ const NavBar = (props) => {
           </Link>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="me-auto" style={{ color: 'white'}}>
+            <Nav className="me-auto" style={{ color: 'red'}}>
+            <NavDropdown title="Guitar">
+              <NavDropdown.Item className="button-color-nav-guitar">
               <Link to="/category/electric" className="d-flex m-3">
                 <a className="nav-warning--color">Electric</a>
               </Link>
+              </NavDropdown.Item>
+              <NavDropdown.Item className="button-color-nav-guitar">
               <Link to="/category/acoustic" className="d-flex m-3">
                 <a className="nav-warning--color">Acoustic</a>
               </Link>
+              </NavDropdown.Item>
+              </NavDropdown>
+              <Link to="/category/bass" className="d-flex m-2">
+                  <a className="nav-warning--color">Bass</a>
+              </Link>
             </Nav>
             <Nav>
-              <Form className="d-flex">
-                <FormControl
-                  type="search"
-                  placeholder="Search"
-                  className="mr-3"
-                  aria-label="Search"
-                />
-                <Button variant="outline-warning" className="nav-spacing">
-                  Search
-                </Button>
-              </Form>
+            </Nav>
+            <Nav>
               <Link className="nav-spacing" to="/cart">
                 <CartWidget />
               </Link>

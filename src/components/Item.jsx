@@ -11,7 +11,7 @@ const Item = ({ id, name, image, price }) => {
       <Card
         className="m-3 p-0"
         style={{
-          width: "15rem",
+          width: "18rem",
           height: "auto",
           borderRadius: "14px",
           backgroundColor: "#f8f9fa",

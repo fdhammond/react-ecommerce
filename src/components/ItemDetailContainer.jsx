@@ -8,7 +8,6 @@ import Col from "react-bootstrap/Col";
 import ItemDetail from "./ItemDetail";
 import BeatLoader from "react-spinners/BeatLoader";
 
-
 const ItemDetailContainer = () => {
   const [productos, setProductos] = useState({});
   const { loading, setLoading } = useCartContext()
