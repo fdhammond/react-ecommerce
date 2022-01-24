@@ -4,7 +4,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## ReactJS simple ecommerce - CoderHouse ReactJS Course
 
-This project was developed during the CoderHouse ReactJS course.
+This project was developed during the CoderHouse ReactJS course.  
+  
+https://musiclandecommerce.netlify.app/
 
 ## Tech Used
 
